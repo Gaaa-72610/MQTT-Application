@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<body>
+<div id="data"></div>
+<br>
+<script>
+    setInterval(function(){
+        a2();
+    },1000);
+    function a2(){
+        $.get({
+            url:"/test111",
+            success:function (data) {
+                console.log(data);
+                $("#data").text(data);
+            }
+        })
+    }
+</script>
+</body>
+</html>

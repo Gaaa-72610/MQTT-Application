@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iot.mapper.MqttMapper">
+    <insert id="insertData" parameterType="HTData">
+        insert into h_t_data(recv_time,recv_data1,recv_data2) values (#{recvTime},#{recvData1},#{recvData2});
+    </insert>
+</mapper>
+
